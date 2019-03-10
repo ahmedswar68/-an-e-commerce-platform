@@ -17,12 +17,17 @@ class Filter
 
   public function apply(Builder $builder, array $filters)
   {
-    foreach ($filters as $key => $filter) {
+    foreach ($this->limitFilters($filters) as $key => $filter) {
       if (!$filter instanceof \App\Filtering\Contracts\Filter)
         continue;
 
       $filter->apply($builder, $this->request->get($key));
     }
     return $builder;
+  }
+
+  protected function limitFilters(array $filters)
+  {
+    return array_only($filters, array_keys($this->request->all()));
   }
 }

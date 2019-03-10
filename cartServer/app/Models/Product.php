@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-use App\Filtering\Filter;
-use Illuminate\Database\Eloquent\Builder;
+use App\Models\Traits\CanBeFiltered;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+  use CanBeFiltered;
+
   public function getRouteKeyName()
   {
     return 'slug';
@@ -18,9 +19,8 @@ class Product extends Model
     return $this->belongsToMany(Category::class);
   }
 
-  public function scopeWithFilters(Builder $builder, $filters = [])
+  public function variations()
   {
-    $filter = new Filter(request());
-    return $filter->apply($builder, $filters);
+    return $this->hasMany(ProductVariation::class)->orderBy('order', 'asc');
   }
 }
