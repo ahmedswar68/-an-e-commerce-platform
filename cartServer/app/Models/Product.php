@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-  use CanBeFiltered,HasPrice;
+  use CanBeFiltered, HasPrice;
 
   public function getRouteKeyName()
   {
@@ -23,5 +23,17 @@ class Product extends Model
   public function variations()
   {
     return $this->hasMany(ProductVariation::class)->orderBy('order', 'asc');
+  }
+
+  public function stockCount()
+  {
+    return $this->variations->sum(function ($variation) {
+      return $variation->stockCount();
+    });
+  }
+
+  public function inStock()
+  {
+    return $this->stockCount() > 0;
   }
 }

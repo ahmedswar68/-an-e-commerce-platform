@@ -20,6 +20,8 @@ class ProductResource extends JsonResource
       'slug' => $this->slug,
       'description' => $this->description,
       'price' => $this->formattedPrice,
+      'stock_count' => $this->stockCount(),
+      'in_stock' => $this->inStock(),
       'variations' => ProductVariationResource::collection(
         $this->variations->groupBy('type.name')
       )

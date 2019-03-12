@@ -67,4 +67,24 @@ class ProductVariationTest extends TestCase
     );
     $this->assertInstanceOf(Stock::class, $variation->stocks->first());
   }
+
+  /** @test */
+  public function it_has_stock_information()
+  {
+    $variation = create(ProductVariation::class);
+    $stock = make(Stock::class);
+
+    $variation->stocks()->save($stock);
+    $this->assertInstanceOf(ProductVariation::class, $variation->stock->first());
+  }
+
+  /** @test */
+  public function it_has_stock_count_pivot_within_stock_information()
+  {
+    $variation = create(ProductVariation::class);
+    $variation->stocks()->save(
+      make(Stock::class, ['quantity' => $quantity = 5])
+    );
+    $this->assertEquals($variation->stock->first()->pivot->stock, $quantity);
+  }
 }

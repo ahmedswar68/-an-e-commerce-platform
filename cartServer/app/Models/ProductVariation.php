@@ -36,4 +36,21 @@ class ProductVariation extends Model
   {
     return $this->hasMany(Stock::class);
   }
+
+  public function stock()
+  {
+    return $this->belongsToMany(
+      ProductVariation::class, 'product_variation_stock_view'
+    )->withPivot(['stock', 'in_stock']);
+  }
+
+  public function stockCount()
+  {
+    return $this->stock->sum('pivot.stock');
+  }
+
+  public function inStock()
+  {
+    return $this->stockCount() > 0;
+  }
 }
