@@ -91,6 +91,13 @@
       <path value="$PROJECT_DIR$/cartServer/vendor/psr/container" />
       <path value="$PROJECT_DIR$/cartServer/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/cartServer/vendor/barryvdh/laravel-cors" />
+      <path value="$PROJECT_DIR$/cartServer/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/cartServer/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/cartServer/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/cartServer/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/cartServer/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/cartServer/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/cartServer/vendor/symfony/polyfill-util" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
