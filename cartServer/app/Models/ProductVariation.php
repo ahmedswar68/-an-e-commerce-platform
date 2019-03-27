@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\cart\Money;
+use App\Cart\Money;
 use App\Models\Traits\HasPrice;
 use Illuminate\Database\Eloquent\Model;
 

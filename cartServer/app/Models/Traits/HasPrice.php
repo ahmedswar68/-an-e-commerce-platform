@@ -2,7 +2,7 @@
 
 namespace App\Models\Traits;
 
-use App\cart\Money;
+use App\Cart\Money;
 
 
 trait HasPrice

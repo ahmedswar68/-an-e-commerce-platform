@@ -1,6 +1,6 @@
 <?php
 
-namespace App\cart;
+namespace App\Cart;
 
 use Money\Currencies\ISOCurrencies;
 use Money\Currency;

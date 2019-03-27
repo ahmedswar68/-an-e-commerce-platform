@@ -1,0 +1,53 @@
+<?php
+
+namespace App\Cart;
+
+
+use App\User;
+
+class Cart
+{
+  public function __construct(User $user)
+  {
+    $this->user = $user;
+  }
+
+  public function add($products)
+  {
+    $this->user->cart()->syncWithoutDetaching($this->getStorePayload($products));
+  }
+
+  public function update($productId, $quantity)
+  {
+    $this->user->cart()->updateExistingPivot($productId, [
+      'quantity' => $quantity
+    ]);
+  }
+
+  public function delete($productId)
+  {
+    $this->user->cart()->detach($productId);
+  }
+
+  public function empty()
+  {
+    $this->user->cart()->detach();
+  }
+
+  protected function getStorePayload($products)
+  {
+    $products = collect($products)->keyBy('id')->map(function ($product) {
+      return [
+        'quantity' => $product['quantity'] + $this->getCurrentQuantity($product['id'])
+      ];
+    })->toArray();
+    return $products;
+  }
+
+  protected function getCurrentQuantity($productId)
+  {
+    if ($product = $this->user->cart->where('id', $productId)->first()) {
+      return $product->pivot->quantity;
+    }
+  }
+}

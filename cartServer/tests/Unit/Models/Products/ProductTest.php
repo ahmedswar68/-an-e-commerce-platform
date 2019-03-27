@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Products;
 
-use App\cart\Money;
+use App\Cart\Money;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductVariation;
