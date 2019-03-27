@@ -2,7 +2,7 @@
   <nav class="navbar is-white">
     <div class="container">
       <div class="navbar-brand">
-        <nuxt-link :to="{name:'index'}" class="navbar-item">cart</nuxt-link>
+        <nuxt-link :to="{name:'index'}" class="navbar-item">Cart</nuxt-link>
         <div class="navbar-burger burger" data-target="nav">
           <span></span>
           <span></span>
@@ -31,9 +31,23 @@
       </div>
       <div id="nav" class="navbar-menu">
         <div class="navbar-end">
-          <a href="" class="navbar-item">
-            Sign in
-          </a>
+          <template v-if="!$auth.loggedIn">
+            <nuxt-link :to="{name:'auth-signin'}" class="navbar-item">
+              Sign in
+            </nuxt-link>
+          </template>
+          <template v-else>
+            <a href="#" class="navbar-item">
+              {{$auth.user.name}}
+            </a>
+            <a href="#" class="navbar-item">
+              Orders
+            </a>
+            <a href="#" class="navbar-item">
+              Cart(0)
+            </a>
+          </template>
+
         </div>
       </div>
     </div>

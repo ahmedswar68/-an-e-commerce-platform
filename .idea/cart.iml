@@ -86,6 +86,8 @@
       <excludeFolder url="file://$MODULE_DIR$/cartServer/vendor/symfony/http-foundation" />
       <excludeFolder url="file://$MODULE_DIR$/cartServer/vendor/symfony/http-kernel" />
       <excludeFolder url="file://$MODULE_DIR$/cartServer/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/cartServer/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/cartServer/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/cartServer/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/cartServer/vendor/symfony/polyfill-php56" />
       <excludeFolder url="file://$MODULE_DIR$/cartServer/vendor/symfony/polyfill-php72" />

@@ -24,6 +24,13 @@ module.exports = {
   */
   loading: {color: '#fff'},
 
+  build: {
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': false
+      }
+    }
+  },
   /*
   ** Global CSS
   */
@@ -43,7 +50,27 @@ module.exports = {
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
   ],
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'auth/login',
+            method: 'post',
+            propertyName: 'meta.token'
+          },
+          user: {
+            url: 'auth/me',
+            method: 'get',
+            propertyName: 'data'
+          }
+        }
+
+      }
+    }
+  },
   axios: {
     baseURL: 'http://127.0.0.1:8000/api/'
   },
