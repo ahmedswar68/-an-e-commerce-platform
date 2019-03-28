@@ -1,5 +1,5 @@
 export const state = () => ({
-  categories: [{name:'cm',children:[]}]
+  categories: [{name: 'cm', children: []}]
 });
 export const getters = {
   categories(state) {
@@ -12,8 +12,12 @@ export const mutations = {
   }
 };
 export const actions = {
-  async nuxtServerInit({commit}) {
-    let response = await this.$axios.$get('categories')
-    commit('SET_CATEGORIES', response.data)
+  async nuxtServerInit({commit, dispatch}) {
+    let response = await this.$axios.$get('categories');
+    commit('SET_CATEGORIES', response.data);
+    await dispatch('cart/getCart');
+    if (this.$auth.loggedIn) {
+      await dispatch('cart/getCart');
+    }
   }
 };
