@@ -24,7 +24,7 @@
             </span>
           </section>
           <section class="section">
-            <form>
+            <form action="" @submit.prevent="add">
               <ProductVariation
                 v-for="(variations,type) in product.variations"
                 :type="type"
@@ -37,7 +37,7 @@
                   <div class="select is-fullwidth">
                     <select name="" id="" v-model="form.quantity">
                       <option :value="x"
-                        v-for="x in parseInt(form.variation.stock_count)" :key="x">{{x}}
+                              v-for="x in parseInt(form.variation.stock_count)" :key="x">{{x}}
                       </option>
                     </select>
                   </div>
@@ -56,6 +56,7 @@
   </div>
 </template>
 <script>
+  import {mapActions} from 'vuex';
   import ProductVariation from '@/components/products/ProductVariation';
 
   export default {
@@ -68,13 +69,28 @@
         }
       }
     },
-    watch:{
-      'form.variation'(){
-        this.form.quantity=1
+    watch: {
+      'form.variation'() {
+        this.form.quantity = 1
       }
     },
     components: {
       ProductVariation
+    },
+    methods: {
+      ...mapActions({
+        store: 'cart/store'
+      }),
+      add() {
+        this.store([{
+          id: this.form.variation.id,
+          quantity: this.form.quantity,
+        }]);
+        this.form = {
+          variation: '',
+          quantity: 1
+        }
+      }
     },
     async asyncData({params, app}) {
       var url = `products/${params.slug}`;

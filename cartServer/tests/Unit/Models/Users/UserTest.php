@@ -2,6 +2,7 @@
 
 namespace Tests\Unit\Models\Users;
 
+use App\Models\Address;
 use App\Models\ProductVariation;
 use App\User;
 use Tests\TestCase;
@@ -31,5 +32,13 @@ class UserTest extends TestCase
     $user = create(User::class);
     $user->cart()->attach(create(ProductVariation::class, ['quantity' => $quantity = 5]));
     $this->assertEquals($user->cart->first(), $quantity);
+  }
+
+  /** @test */
+  public function it_has_many_addresses()
+  {
+    $user = create(User::class);
+    $user->addresses()->save(make(Address::class));
+    $this->assertInstanceOf(Address::class, $user->addresses->first());
   }
 }

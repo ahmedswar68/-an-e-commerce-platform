@@ -2,11 +2,10 @@
 
 namespace Tests\Feature\Cart;
 
+use App\Cart\Cart;
 use App\Models\ProductVariation;
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class CartIndexTest extends TestCase
 {
@@ -27,6 +26,48 @@ class CartIndexTest extends TestCase
     $this->jsonAs($user, 'GET', 'api/cart')
       ->assertJsonFragment(
         ['id' => $variation->id]
+      );
+  }
+
+  /** @test */
+  public function it_shows_if_the_cart_is_empty()
+  {
+    $user = create(User::class);
+    $this->jsonAs($user, 'GET', 'api/cart')
+      ->assertJsonFragment(
+        ['empty' => true]
+      );
+  }
+
+  /** @test */
+  public function it_shows_a_formatted_subtotal()
+  {
+    $user = create(User::class);
+    $this->jsonAs($user, 'GET', 'api/cart')
+      ->assertJsonFragment(
+        ['subtotal' => 'EGP0.00']
+      );
+  }
+
+  /** @test */
+  public function it_shows_a_formatted_total()
+  {
+    $user = create(User::class);
+    $this->jsonAs($user, 'GET', 'api/cart')
+      ->assertJsonFragment(
+        ['total' => 'EGP0.00']
+      );
+  }
+
+
+  /** @test */
+  public function it_syncs_the_cart()
+  {
+    $cart = new Cart($user = create(User::class));
+    $user->cart()->attach($variation = create(ProductVariation::class), ['quantity' => 2]);
+    $this->jsonAs($user, 'GET', 'api/cart')
+      ->assertJsonFragment(
+        ['changed' => true]
       );
   }
 }

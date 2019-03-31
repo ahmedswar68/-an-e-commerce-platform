@@ -2,6 +2,7 @@
 
 Route::resource('categories', 'CategoriesController');
 Route::resource('products', 'ProductController');
+Route::resource('addresses', 'AddressController');
 Route::resource('cart', 'Cart\CartController', [
   'parameters' => [
     'cart' => 'productVariation'

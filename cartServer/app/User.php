@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Address;
 use App\Models\ProductVariation;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -61,5 +62,10 @@ class User extends Authenticatable implements JWTSubject
     return $this->belongsToMany(ProductVariation::class, 'cart_user')
       ->withPivot('quantity')
       ->withTimestamps();
+  }
+
+  public function addresses()
+  {
+    return $this->hasMany(Address::class);
   }
 }

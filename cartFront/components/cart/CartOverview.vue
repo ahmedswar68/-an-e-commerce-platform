@@ -6,6 +6,16 @@
       :key="product.id"
       :product="product"
     ></CartOverviewProduct>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>
+        <p class="has-text-weight-bold">Subtotal</p>
+      </td>
+      <td>{{ subtotal }}</td>
+      <td></td>
+    </tr>
+    <slot name="rows"></slot>
     </tbody>
   </table>
 </template>
@@ -16,7 +26,9 @@
   export default {
     computed: {
       ...mapGetters({
-        products: 'cart/products'
+        products: 'cart/products',
+        total: 'cart/total',
+        subtotal: 'cart/subtotal',
       })
     },
     components: {
