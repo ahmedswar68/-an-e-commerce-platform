@@ -58,6 +58,7 @@
 
   export default {
     computed: {
+      // this.$store.commit('categories'),
       ...mapGetters({
         categories: 'categories',
         cartCount:'cart/count'

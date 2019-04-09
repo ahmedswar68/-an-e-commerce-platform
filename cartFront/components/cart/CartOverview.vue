@@ -1,5 +1,5 @@
 <template>
-  <table class="is-hoverable is-fullwidth">
+  <table class="table is-hoverable is-fullwidth">
     <tbody>
     <CartOverviewProduct
       v-for="product in products"

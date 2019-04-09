@@ -2,11 +2,11 @@
 
 namespace App\Cart;
 
+use NumberFormatter;
 use Money\Currencies\ISOCurrencies;
 use Money\Currency;
 use Money\Formatter\IntlMoneyFormatter;
 use Money\Money as BaseMoney;
-use NumberFormatter;
 
 class Money
 {
@@ -29,5 +29,16 @@ class Money
       new ISOCurrencies()
     );
     return $formatter->format($this->money);
+  }
+
+  public function add(Money $money)
+  {
+    $this->money = $this->money->add($money->instance());
+    return $this;
+  }
+
+  public function instance()
+  {
+    return $this->money;
   }
 }

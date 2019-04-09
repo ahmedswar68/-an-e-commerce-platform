@@ -3,7 +3,10 @@
     <div class="container is-fluid">
       <div class="columns is-fullwidth is-full">
         <div class="column is-three-quarters">
-          <ShippingAddress :addresses="addresses"/>
+          <ShippingAddress
+            :addresses="addresses"
+            v-model="form.address_id"
+          />
 
           <article class="message">
             <div class="message-body">
@@ -11,15 +14,15 @@
             </div>
           </article>
 
-          <article class="message">
+          <article class="message" v-if="shippingMethodId">
             <div class="message-body">
               <h1 class="title is-5">
                 Shipping
               </h1>
               <div class="select is-fullwidth">
-                <select>
-                  <option>
-                    Royal Mail 1st Class
+                <select v-model="shippingMethodId">
+                  <option v-for="shipping in shippingMethods" :key="shipping.id" :value="shipping.id">
+                    {{shipping.name}} ({{ shipping.price }})
                   </option>
                 </select>
               </div>
@@ -32,13 +35,19 @@
                 Cart summary
               </h1>
               <CartOverview>
-                <template slot="rows">
+                <template slot="rows"  v-if="shippingMethodId">
                   <tr>
                     <td></td>
                     <td></td>
                     <td class="has-text-weight-bold">Shipping</td>
-                    <td>EGP 0.00</td>
+                    <td>{{shipping.price}}</td>
                     <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="has-text-weight-bold">Total</td>
+                    <td>{{total}}</td>
                     <td></td>
                   </tr>
                 </template>
@@ -68,14 +77,29 @@
   </div>
 </template>
 <script>
-  import {mapGetters} from 'vuex';
+  import {mapGetters, mapActions} from 'vuex';
   import CartOverview from '@/components/cart/CartOverview';
   import ShippingAddress from '@/components/checkout/addresses/ShippingAddress';
 
   export default {
     data() {
       return {
-        addresses: []
+        addresses: [],
+        shippingMethods: [],
+        form: {
+          address_id: null
+        }
+      }
+    },
+    watch: {
+      'form.address_id'(addressId) {
+        console.log(addressId);
+        this.getShippingMethodsForAddress(addressId).then(() => {
+          this.setShipping(this.shippingMethods[0])
+        })
+      },
+      shippingMethodId() {
+        this.getCart()
       }
     },
     components: {
@@ -86,7 +110,30 @@
         empty: 'cart/empty',
         total: 'cart/total',
         products: 'cart/products',
-      })
+        shipping: 'cart/shipping',
+      }),
+      shippingMethodId: {
+        get() {
+          return this.shipping ? this.shipping.id : ''
+        },
+        set(shippingMethodId) {
+          this.setShipping(this.shippingMethods.find(s => s.id === shippingMethodId))
+        }
+      },
+    },
+    methods: {
+      ...mapActions({
+        setShipping: 'cart/setShipping',
+        getCart: 'cart/getCart',
+
+      }),
+      async getShippingMethodsForAddress(addressId) {
+        let response = await this.$axios.$get('addresses/' + addressId + '/shipping');
+        console.log(response);
+
+        this.shippingMethods = response.data;
+        return response;
+      }
     },
     async asyncData({app}) {
       let addresses = await app.$axios.$get('addresses');

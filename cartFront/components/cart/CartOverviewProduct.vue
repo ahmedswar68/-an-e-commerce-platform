@@ -24,7 +24,6 @@
     <td>{{product.total}}</td>
 
     <td><a href="" @click.prevent="destroyConfirmation(product.id)">Remove</a></td>
-    <td></td>
   </tr>
 </template>
 <script>
