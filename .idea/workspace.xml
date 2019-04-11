@@ -11,6 +11,7 @@
       <change afterPath="$PROJECT_DIR$/cartFront/pages/cart/index.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cartFront/pages/checkout/index.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cartFront/store/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cartFront/layouts/partials/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cartFront/layouts/partials/Navigation.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cartFront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cartFront/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cartFront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cartFront/package.json" afterDir="false" />
@@ -18,16 +19,24 @@
       <change beforePath="$PROJECT_DIR$/cartFront/pages/products/_slug.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cartFront/pages/products/_slug.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cartFront/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cartFront/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cartServer/app/Cart/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/app/Cart/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartServer/app/Cart/Money.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/app/Cart/Money.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartServer/app/Http/Controllers/Cart/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/app/Http/Controllers/Cart/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartServer/app/Http/Resources/ShippingMethodResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/app/Http/Resources/ShippingMethodResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/app/Models/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/app/Models/Country.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cartServer/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/app/Models/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartServer/database/factories/AddressFactroy.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/factories/AddressFactroy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_084925_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_084925_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202348_create_country_shipping_method_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202348_create_country_shipping_method_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartServer/tests/Feature/Addresses/AddressShippingTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/tests/Feature/Addresses/AddressShippingTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartIndexTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartIndexTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/app/Models/ShippingMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/app/Models/ShippingMethod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/factories/OrderFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/factories/OrderFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/factories/ProductVariationFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/factories/ProductVariationFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_10_094712_create_product_variations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_10_094712_create_product_variations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_084925_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_104925_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_085027_create_product_variation_order_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_105027_create_product_variation_order_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_091250_create_product_variation_stock_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_107250_create_product_variation_stock_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_104849_create_addresses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_104849_create_addresses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_144631_add_default_to_addresses_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202339_create_shipping_method_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_012339_create_shipping_method_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202348_create_country_shipping_method_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202348_create_shipping_method_country_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cartServer/tests/Unit/Cart/CartTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/tests/Unit/Cart/CartTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/tests/Unit/Models/Orders/OrderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/tests/Unit/Models/Orders/OrderTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartServer/tests/Unit/Models/Users/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/cartServer/tests/Unit/Models/Users/UserTest.php" afterDir="false" />
     </list>
     <ignored path="cartServer/tests/Feature/Auth/.php" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,55 +64,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Orders/OrderStoreTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="108" column="40" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="40" />
+              <folding>
+                <element signature="e#40#63#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/Cart/CartTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4158">
+              <caret line="159" column="49" selection-start-line="159" selection-start-column="18" selection-end-line="159" selection-end-column="49" />
+              <folding>
+                <element signature="e#35#53#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cartServer/app/Models/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+            <state relative-caret-position="756">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding>
                 <element signature="e#30#43#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/Models/Orders/OrderTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-              <folding>
-                <element signature="e#44#67#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_084925_create_orders_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cartServer/database/factories/AddressFactroy.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cartServer/database/factories/OrderFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="57" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="57" />
-              <folding>
-                <element signature="e#7#36#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,18 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cartServer/tests/Unit/Models/Categories/CategoryTest.php" />
-        <option value="$PROJECT_DIR$/cartServer/app/Http/Resources/CountryResource.php" />
-        <option value="$PROJECT_DIR$/cartServer/tests/Feature/Addresses/AddressIndexTest.php" />
-        <option value="$PROJECT_DIR$/cartServer/tests/Feature/Addresses/AddressStoreTest.php" />
-        <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_144631_add_default_to_addresses_table.php" />
-        <option value="$PROJECT_DIR$/cartServer/app/Http/Controllers/AddressController.php" />
-        <option value="$PROJECT_DIR$/cartServer/app/Http/Requests/Addresses/AddressStoreRequest.php" />
-        <option value="$PROJECT_DIR$/cartServer/tests/Unit/Models/Addresses/AddressTest.php" />
-        <option value="$PROJECT_DIR$/cartServer/app/Models/Address.php" />
-        <option value="$PROJECT_DIR$/cartFront/pages/checkout/checkout.vue" />
-        <option value="$PROJECT_DIR$/cartFront/pages/cart/index.vue" />
-        <option value="$PROJECT_DIR$/cartFront/components/addresses/ShippingAddress.vue" />
         <option value="$PROJECT_DIR$/cartServer/app/Http/Resources/AddressResource.php" />
         <option value="$PROJECT_DIR$/cartFront/components/checkout/addresses/ShippingAddressSelector.vue" />
         <option value="$PROJECT_DIR$/cartServer/app/Http/Controllers/CountryController.php" />
@@ -164,9 +143,6 @@
         <option value="$PROJECT_DIR$/cartServer/database/factories/ShippingMethodFactroy.php" />
         <option value="$PROJECT_DIR$/cartServer/tests/Unit/ShippingMethodTest.php" />
         <option value="$PROJECT_DIR$/cartServer/tests/Unit/Models/Countries/CountryTest.php" />
-        <option value="$PROJECT_DIR$/cartServer/app/Models/ShippingMethod.php" />
-        <option value="$PROJECT_DIR$/cartServer/app/Models/Country.php" />
-        <option value="$PROJECT_DIR$/cartServer/routes/api.php" />
         <option value="$PROJECT_DIR$/cartServer/app/Providers/AuthServiceProvider.php" />
         <option value="$PROJECT_DIR$/cartServer/app/Policies/AddressPolicy.php" />
         <option value="$PROJECT_DIR$/cartServer/app/Http/Controllers/AddressShippingController.php" />
@@ -175,10 +151,7 @@
         <option value="$PROJECT_DIR$/cartServer/tests/Feature/Addresses/AddressShippingTest.php" />
         <option value="$PROJECT_DIR$/cartFront/pages/index.vue" />
         <option value="$PROJECT_DIR$/cartFront/components/checkout/addresses/ShippingAddress.vue" />
-        <option value="$PROJECT_DIR$/cartServer/app/Http/Controllers/Cart/CartController.php" />
-        <option value="$PROJECT_DIR$/cartServer/app/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/cartServer/app/Cart/Money.php" />
-        <option value="$PROJECT_DIR$/cartServer/tests/Unit/Cart/CartTest.php" />
         <option value="$PROJECT_DIR$/cartServer/tests/Unit/Money/MoneyTest.php" />
         <option value="$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartIndexTest.php" />
         <option value="$PROJECT_DIR$/cartFront/store/cart.js" />
@@ -188,11 +161,29 @@
         <option value="$PROJECT_DIR$/cartFront/layouts/partials/Navigation.vue" />
         <option value="$PROJECT_DIR$/cartFront/store/index.js" />
         <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202348_create_country_shipping_method_table.php" />
+        <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_04_09_064147_add_address_and_shipping_to_order_table.php" />
+        <option value="$PROJECT_DIR$/cartServer/routes/api.php" />
+        <option value="$PROJECT_DIR$/cartServer/app/User.php" />
+        <option value="$PROJECT_DIR$/cartServer/tests/Unit/Models/Users/UserTest.php" />
+        <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_04_09_201204_add_subtotal_to_orders_table.php" />
         <option value="$PROJECT_DIR$/cartServer/database/factories/OrderFactory.php" />
         <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_084925_create_orders_table.php" />
-        <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_04_09_064147_add_address_and_shipping_to_order_table.php" />
         <option value="$PROJECT_DIR$/cartServer/app/Models/Order.php" />
+        <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_104849_create_addresses_table.php" />
+        <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_03_10_094712_create_product_variations_table.php" />
+        <option value="$PROJECT_DIR$/cartServer/database/factories/ProductVariationFactory.php" />
         <option value="$PROJECT_DIR$/cartServer/tests/Unit/Models/Orders/OrderTest.php" />
+        <option value="$PROJECT_DIR$/cartServer/database/factories/ProductVariationTypeFactory.php" />
+        <option value="$PROJECT_DIR$/cartServer/app/Models/ShippingMethod.php" />
+        <option value="$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202348_create_shipping_method_country_table.php" />
+        <option value="$PROJECT_DIR$/cartServer/app/Rules/ValidShippingMethod.php" />
+        <option value="$PROJECT_DIR$/cartServer/app/Cart/Cart.php" />
+        <option value="$PROJECT_DIR$/cartServer/app/Http/Controllers/Cart/CartController.php" />
+        <option value="$PROJECT_DIR$/cartServer/app/Http/Requests/Orders/OrderStoreRequest.php" />
+        <option value="$PROJECT_DIR$/cartServer/app/Models/Country.php" />
+        <option value="$PROJECT_DIR$/cartServer/app/Http/Controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/cartServer/tests/Feature/Orders/OrderStoreTest.php" />
+        <option value="$PROJECT_DIR$/cartServer/tests/Unit/Cart/CartTest.php" />
       </list>
     </option>
   </component>
@@ -304,10 +295,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="857" />
-    <option name="y" value="52" />
-    <option name="width" value="1393" />
-    <option name="height" value="964" />
+    <option name="x" value="690" />
+    <option name="width" value="1395" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -332,6 +322,12 @@
               <item name="cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="cart" type="462c0819:PsiDirectoryNode" />
               <item name="cartServer" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="cartServer" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -346,7 +342,7 @@
               <item name="cart" type="462c0819:PsiDirectoryNode" />
               <item name="cartServer" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="seeds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cart" type="b2602c69:ProjectViewProjectNode" />
@@ -359,24 +355,38 @@
               <item name="cart" type="462c0819:PsiDirectoryNode" />
               <item name="cartServer" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Unit" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="cart" type="462c0819:PsiDirectoryNode" />
               <item name="cartServer" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Unit" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
+              <item name="Cart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="cart" type="462c0819:PsiDirectoryNode" />
               <item name="cartServer" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Unit" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
               <item name="Orders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="cartServer" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Unit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="cartServer" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Unit" type="462c0819:PsiDirectoryNode" />
+              <item name="Cart" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -470,7 +480,11 @@
       <workItem from="1553865372102" duration="7024000" />
       <workItem from="1553940653120" duration="17201000" />
       <workItem from="1554361889829" duration="3607000" />
-      <workItem from="1554667297773" duration="26629000" />
+      <workItem from="1554667297773" duration="30975000" />
+      <workItem from="1554822754323" duration="8509000" />
+      <workItem from="1554880206307" duration="2968000" />
+      <workItem from="1554899354307" duration="4762000" />
+      <workItem from="1554965031953" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="Product Variations and Product Variations Types">
       <created>1552209745503</created>
@@ -544,13 +558,34 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154016000" />
+    <option name="totallyTimeSpent" value="175197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1021" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24493062" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21558164" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32997763" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32997763" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30872482" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="12" weight="0.32997763" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497332" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24759872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -569,28 +604,6 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497332" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23692636" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32997763" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32997763" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.34787473" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="12" weight="0.32997763" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout-to-restore>
   </component>
@@ -650,181 +663,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="cart frontend" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/Models/Addresses/AddressTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="18" selection-end-column="3" />
-          <folding>
-            <element signature="e#47#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_10_094712_create_product_variations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/UserFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/ProductVariationTypeFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/ProductVariationFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/ProductFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/StockFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/ShippingMethodFactroy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Models/ShippingMethod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="e#30#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="403" column="41" selection-start-line="403" selection-start-column="41" selection-end-line="403" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/ShippingMethodTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="e#30#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/Models/Countries/CountryTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="e#47#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Models/Country.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Controllers/AddressController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" selection-start-line="11" selection-end-line="20" />
-          <folding>
-            <element signature="e#40#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/vendor/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesRequests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Policies/AddressPolicy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding>
-            <element signature="e#32#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Addresses/AddressStoreTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Models/Address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Resources/ShippingMethodResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Addresses/AddressShippingTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-          <folding>
-            <element signature="e#43#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Controllers/AddressShippingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#40#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartFront/pages/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cartFront/nuxt.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -839,13 +677,6 @@
           <folding>
             <element signature="e#1304#1368#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Controllers/Cart/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -880,53 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/Cart/CartTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#35#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartDestroyTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-          <folding>
-            <element signature="e#38#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Cart/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartUpdateTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="49" />
-          <folding>
-            <element signature="e#38#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartStoreTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="3" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="e#38#70#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -982,37 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_144631_add_default_to_addresses_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202339_create_shipping_method_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202348_create_country_shipping_method_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/OrderFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="57" />
-          <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cartServer/database/factories/AddressFactroy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1020,36 +773,292 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_084925_create_orders_table.php">
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Controllers/AddressController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
+        <state relative-caret-position="135">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="e#40#92#0#PHP" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartDestroyTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+          <folding>
+            <element signature="e#38#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartStoreTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="3" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="e#38#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/OrderFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="e#7#36#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_04_09_201204_add_subtotal_to_orders_table.php" />
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_104925_create_orders_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/Models/Users/UserTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_144631_add_default_to_addresses_table.php" />
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_12_083708_create_stocks_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_04_09_064147_add_address_and_shipping_to_order_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="558">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cartServer/app/Models/Order.php">
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_012339_create_shipping_method_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="108">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_26_183608_create_cart_user_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_102822_create_countries_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_104849_create_addresses_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_10_094712_create_product_variations_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/ProductVariationTypeFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/ProductVariationFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Models/ProductVariation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-696">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_03_30_105027_create_product_variation_order_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10503">
+          <caret line="403" column="75" selection-start-line="403" selection-start-column="59" selection-end-line="403" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/migrations/2019_04_07_202348_create_shipping_method_country_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Products/ProductShowTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Cart/CartUpdateTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
           <folding>
-            <element signature="e#30#43#0#PHP" expanded="true" />
+            <element signature="e#38#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/database/factories/ShippingMethodFactroy.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Cart/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Controllers/Cart/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+          <folding>
+            <element signature="e#735#1035#0#PHP" />
+            <element signature="e#1147#1315#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Models/ShippingMethod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#30#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Rules/ValidShippingMethod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="e#29#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Models/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Requests/Orders/OrderStoreRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding>
+            <element signature="e#44#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Http/Controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/Models/Orders/OrderTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        <state relative-caret-position="1268">
+          <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
           <folding>
             <element signature="e#44#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/tests/Feature/Orders/OrderStoreTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="108" column="40" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="40" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+            <element signature="e#211#329#0#PHP" />
+            <element signature="e#348#531#0#PHP" />
+            <element signature="e#550#778#0#PHP" />
+            <element signature="e#797#1138#0#PHP" />
+            <element signature="e#1157#1355#0#PHP" />
+            <element signature="e#1374#1617#0#PHP" />
+            <element signature="e#1636#2144#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/tests/Unit/Cart/CartTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4158">
+          <caret line="159" column="49" selection-start-line="159" selection-start-column="18" selection-end-line="159" selection-end-column="49" />
+          <folding>
+            <element signature="e#35#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cartServer/app/Models/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding>
+            <element signature="e#30#43#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -156,4 +156,13 @@ class CartTest extends TestCase
     $cart->withShipping($shipping->id);
     $this->assertEquals($cart->total()->amount(), 3000);
   }
+  /** @test */
+  public function it_can_returns_products_in_cart(){
+    $cart = new Cart($user = create(User::class));
+    $user->cart()->attach(
+      $variation = create(ProductVariation::class, ['price' => 1000]),
+      ['quantity' => 2]
+    );
+    $this->assertInstanceOf(ProductVariation::class,$cart->products()->first());
+  }
 }

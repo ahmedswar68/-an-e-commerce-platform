@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Models\Address;
+use App\Models\Order;
 use App\Models\ProductVariation;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -67,5 +68,10 @@ class User extends Authenticatable implements JWTSubject
   public function addresses()
   {
     return $this->hasMany(Address::class);
+  }
+
+  public function orders()
+  {
+    return $this->hasMany(Order::class);
   }
 }

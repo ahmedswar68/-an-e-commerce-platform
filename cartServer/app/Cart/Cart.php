@@ -17,6 +17,11 @@ class Cart
     $this->user = $user;
   }
 
+  public function products()
+  {
+    return $this->user->cart;
+  }
+
   public function withShipping($shippingId)
   {
     $this->shipping = ShippingMethod::find($shippingId);
@@ -60,7 +65,7 @@ class Cart
 
   public function total()
   {
-    if($this->shipping){
+    if ($this->shipping) {
       return $this->subtotal()->add($this->shipping->price);
     }
     return $this->subtotal();

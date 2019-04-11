@@ -21,6 +21,7 @@ class CreateAddressesTable extends Migration
       $table->string('address_1');
       $table->string('city');
       $table->string('postal_code');
+      $table->boolean('default')->default(false);
       $table->timestamps();
 
       $table->foreign('user_id')->references('id')->on('users');

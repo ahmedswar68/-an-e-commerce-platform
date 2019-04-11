@@ -19,6 +19,7 @@ class CreateProductVariationsTable extends Migration
       $table->string('name');
       $table->integer('price')->nullable();
       $table->integer('order')->nullable();
+      $table->integer('quantity')->default(0);
       $table->integer('product_variation_type_id')->unsigned()->index();
       $table->timestamps();
       $table->foreign('product_variation_type_id')->references('id')->on('product_variation_types');

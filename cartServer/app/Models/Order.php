@@ -36,4 +36,10 @@ class Order extends Model
   {
     return $this->belongsTo(ShippingMethod::class);
   }
+  public function products()
+  {
+    return $this->belongsToMany(ProductVariation::class,'product_variation_order')
+      ->withPivot(['quantity'])
+      ->withTimestamps();
+  }
 }

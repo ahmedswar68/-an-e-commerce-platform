@@ -11,6 +11,6 @@ class Country extends Model
 
   public function shippingMethods()
   {
-    return $this->belongsToMany(ShippingMethod::class);
+    return $this->belongsToMany(ShippingMethod::class,'shipping_method_country');
   }
 }

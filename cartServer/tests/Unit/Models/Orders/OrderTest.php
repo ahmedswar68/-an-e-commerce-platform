@@ -4,6 +4,7 @@ namespace Tests\Unit\Models\Orders;
 
 use App\Models\Address;
 use App\Models\Order;
+use App\Models\ProductVariation;
 use App\Models\ShippingMethod;
 use App\User;
 use Tests\TestCase;
@@ -16,7 +17,7 @@ class OrderTest extends TestCase
     $order = create(Order::class, [
       'user_id' => create(User::class)
     ]);
-    $this->assertEquals($order->status,Order::PENDING) ;
+    $this->assertEquals($order->status, Order::PENDING);
   }
 
   /** @test */
@@ -44,5 +45,17 @@ class OrderTest extends TestCase
       'user_id' => create(User::class)
     ]);
     $this->assertInstanceOf(ShippingMethod::class, $order->shippingMethod);
+  }
+
+  /** @test */
+  public function it_has_many_products()
+  {
+    $order = create(Order::class, [
+      'user_id' => create(User::class)
+    ]);
+    $order->products()->attach(
+      create(ProductVariation::class)
+    );
+    $this->assertInstanceOf(ProductVariation::class, $order->products->first());
   }
 }

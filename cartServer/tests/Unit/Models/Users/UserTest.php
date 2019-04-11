@@ -3,6 +3,7 @@
 namespace Tests\Unit\Models\Users;
 
 use App\Models\Address;
+use App\Models\Order;
 use App\Models\ProductVariation;
 use App\User;
 use Tests\TestCase;
@@ -40,5 +41,13 @@ class UserTest extends TestCase
     $user = create(User::class);
     $user->addresses()->save(make(Address::class));
     $this->assertInstanceOf(Address::class, $user->addresses->first());
+  }
+
+  /** @test */
+  public function it_has_many_orders()
+  {
+    $user = create(User::class);
+    create(Order::class, ['user_id' => $user->id]);
+    $this->assertInstanceOf(Order::class, $user->orders->first());
   }
 }
