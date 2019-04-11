@@ -1,2 +1,2 @@
 # -an-e-commerce-platform
-Using Laravel and Vuejs and nuxtjs
+Using Laravel, Vuejs, nuxtjs and TTD
