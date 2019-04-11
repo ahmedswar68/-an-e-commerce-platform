@@ -35,7 +35,7 @@
                 Cart summary
               </h1>
               <CartOverview>
-                <template slot="rows"  v-if="shippingMethodId">
+                <template slot="rows" v-if="shippingMethodId">
                   <tr>
                     <td></td>
                     <td></td>
@@ -57,7 +57,9 @@
 
           <article class="message">
             <div class="message-body">
-              <button :disabled="empty" class="button is-info is-fullwidth is-medium">
+              <button :disabled="empty|| submitting"
+                      @click.prevent="order"
+                      class="button is-info is-fullwidth is-medium">
                 Place order
               </button>
             </div>
@@ -66,7 +68,9 @@
         <div class="column is-one-quarter">
           <article class="message">
             <div class="message-body">
-              <button :disabled="empty" class="button is-info is-fullwidth is-medium">
+              <button :disabled="empty || submitting"
+                      @click.prevent="order"
+                      class="button is-info is-fullwidth is-medium">
                 Place order
               </button>
             </div>
@@ -84,6 +88,7 @@
   export default {
     data() {
       return {
+        submitting: false,
         addresses: [],
         shippingMethods: [],
         form: {
@@ -127,6 +132,23 @@
         getCart: 'cart/getCart',
 
       }),
+      async order() {
+        this.submitting = true;
+
+        try {
+          await this.$axios.$post('orders', {
+            ...this.form,
+            shipping_method_id: this.shippingMethodId
+          });
+          await this.getCart();
+
+          this.$router.replace({
+            name: 'orders'
+          })
+        } catch (e) {
+
+        }
+      },
       async getShippingMethodsForAddress(addressId) {
         let response = await this.$axios.$get('addresses/' + addressId + '/shipping');
         console.log(response);

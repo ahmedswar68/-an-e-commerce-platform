@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Cart\Money;
+use App\Models\Collections\ProductVariationCollection;
 use App\Models\Traits\HasPrice;
 use Illuminate\Database\Eloquent\Model;
 
@@ -57,5 +58,10 @@ class ProductVariation extends Model
   public function inStock()
   {
     return $this->stockCount() > 0;
+  }
+
+  public function newCollection(array $models=[])
+  {
+    return new ProductVariationCollection($models);
   }
 }
