@@ -14,20 +14,22 @@ class OrderResource extends JsonResource
    */
   public function toArray($request)
   {
+//    dd($this->total()->formatted());
     return [
       'id' => $this->id,
       'status' => $this->status,
       'created_at' => $this->created_at->toDateTimeString(),
-      'subtotal' => $this->subtotal,
+      'subtotal' => $this->subtotal->formatted(),
+      'total' => $this->total()->formatted(),
       'products' => ProductVariationResource::collection(
         $this->whenLoaded('products')
       ),
       'address' => AddressResource::collection(
         $this->whenLoaded('address')
       ),
-      'shippingMethod' => ShippingMethodResource::collection(
-        $this->whenLoaded('shippingMethod')
-      ),
+//      'shippingMethod' => ShippingMethodResource::collection(
+//        $this->whenLoaded('shippingMethod')
+//      ),
     ];
   }
 }

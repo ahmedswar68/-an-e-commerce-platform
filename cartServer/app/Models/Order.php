@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
+use App\Cart\Money;
 
 class Order extends Model
 {
@@ -22,6 +23,16 @@ class Order extends Model
     });
   }
 
+  public function getSubtotalAttribute($subtotal)
+  {
+    return new Money($subtotal);
+  }
+
+  public function total()
+  {
+    return $this->subtotal->add($this->shippingMethod->price);
+  }
+
   public function user()
   {
     return $this->belongsTo(User::class);
@@ -36,9 +47,10 @@ class Order extends Model
   {
     return $this->belongsTo(ShippingMethod::class);
   }
+
   public function products()
   {
-    return $this->belongsToMany(ProductVariation::class,'product_variation_order')
+    return $this->belongsToMany(ProductVariation::class, 'product_variation_order')
       ->withPivot(['quantity'])
       ->withTimestamps();
   }

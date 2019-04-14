@@ -5,6 +5,7 @@ Route::resource('products', 'ProductController');
 Route::resource('addresses', 'AddressController');
 Route::resource('countries', 'CountryController');
 Route::resource('orders', 'OrderController');
+Route::resource('payment-methods', 'PaymentMethodController');
 Route::get('addresses/{address}/shipping', 'AddressShippingController@action');
 
 Route::resource('cart', 'Cart\CartController', [

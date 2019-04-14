@@ -40,9 +40,9 @@
             <a href="#" class="navbar-item">
               {{$auth.user.name}}
             </a>
-            <a href="#" class="navbar-item">
+            <NuxtLink :to="{name:'orders'}" class="navbar-item">
               Orders
-            </a>
+            </NuxtLink>
             <NuxtLink :to="{name:'cart'}" class="navbar-item">
               Cart({{cartCount}})
             </NuxtLink>

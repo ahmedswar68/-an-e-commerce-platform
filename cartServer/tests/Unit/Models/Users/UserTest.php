@@ -5,10 +5,9 @@ namespace Tests\Unit\Models\Users;
 use App\Models\Address;
 use App\Models\Order;
 use App\Models\ProductVariation;
+use App\Models\PaymentMethod;
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class UserTest extends TestCase
 {
@@ -49,5 +48,12 @@ class UserTest extends TestCase
     $user = create(User::class);
     create(Order::class, ['user_id' => $user->id]);
     $this->assertInstanceOf(Order::class, $user->orders->first());
+  }
+  /** @test */
+  public function it_has_many_payment_methods()
+  {
+    $user = create(User::class);
+    create(PaymentMethod::class, ['user_id' => $user->id]);
+    $this->assertInstanceOf(PaymentMethod::class, $user->paymentMethods->first());
   }
 }

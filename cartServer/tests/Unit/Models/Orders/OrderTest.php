@@ -2,6 +2,7 @@
 
 namespace Tests\Unit\Models\Orders;
 
+use App\Cart\Money;
 use App\Models\Address;
 use App\Models\Order;
 use App\Models\ProductVariation;
@@ -57,5 +58,33 @@ class OrderTest extends TestCase
       create(ProductVariation::class)
     );
     $this->assertInstanceOf(ProductVariation::class, $order->products->first());
+  }
+  /** @test */
+  public function it_returns_a_money_instance_onto_the_subtotal()
+  {
+    $order = create(Order::class, [
+      'user_id' => create(User::class)
+    ]);
+
+    $this->assertInstanceOf(Money::class, $order->subtotal);
+  }
+  /** @test */
+  public function it_returns_a_money_instance_onto_the_total()
+  {
+    $order = create(Order::class, [
+      'user_id' => create(User::class)
+    ]);
+
+    $this->assertInstanceOf(Money::class, $order->total());
+  }
+  /** @test */
+  public function it_adds_shipping_onto_the_total()
+  {
+    $order = create(Order::class, [
+      'user_id' => create(User::class),
+      'shipping_method_id' => create(ShippingMethod::class,['price'=>1000]),
+    ]);
+
+    $this->assertEquals($order->total()->amount(),2000);
   }
 }

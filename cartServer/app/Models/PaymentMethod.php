@@ -6,19 +6,14 @@ use App\Models\Traits\CanBeDefault;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 
-class Address extends Model
+class PaymentMethod extends Model
 {
   use CanBeDefault;
-  protected $guarded = [];
   protected $casts = ['default' => 'boolean'];
+  protected $guarded = [];
 
   public function user()
   {
     return $this->belongsTo(User::class);
-  }
-
-  public function country()
-  {
-    return $this->hasOne(Country::class, 'id', 'country_id');
   }
 }

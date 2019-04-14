@@ -5,6 +5,7 @@ namespace Tests\Feature\Orders;
 use App\Events\Order\OrderCreated;
 use App\Models\Address;
 use App\Models\Country;
+use App\Models\PaymentMethod;
 use App\Models\ProductVariation;
 use App\Models\ShippingMethod;
 use App\Models\Stock;
@@ -69,6 +70,18 @@ class OrderStoreTest extends TestCase
     $this->jsonAs($user, 'POST', 'api/orders')
       ->assertJsonValidationErrors(['shipping_method_id']);
   }
+  /** @test */
+  public function it_requires_a_payment_method_id()
+  {
+    $user = create(User::class);
+
+    $user->cart()->sync(
+      $product = $this->productWithStock()
+    );
+
+    $this->jsonAs($user, 'POST', 'api/orders')
+      ->assertJsonValidationErrors(['payment_method_id']);
+  }
 
   /** @test */
   public function it_requires_a_shipping_method_id_that_exists()
@@ -112,15 +125,17 @@ class OrderStoreTest extends TestCase
     $user->cart()->sync(
       $product = $this->productWithStock()
     );
-    list($address, $shipping) = $this->orderDependencies($user);
+    list($address, $shipping,$payment) = $this->orderDependencies($user);
     $this->jsonAs($user, 'POST', 'api/orders', [
       'address_id' => $address->id,
-      'shipping_method_id' => $shipping->id
+      'shipping_method_id' => $shipping->id,
+      'payment_method_id' => $payment->id,
     ]);
     $this->assertDatabaseHas('orders', [
       'user_id' => $user->id,
       'address_id' => $address->id,
-      'shipping_method_id' => $shipping->id
+      'shipping_method_id' => $shipping->id,
+      'payment_method_id' => $payment->id,
     ]);
   }
 
@@ -131,10 +146,11 @@ class OrderStoreTest extends TestCase
     $user->cart()->sync(
       $product = $this->productWithStock()
     );
-    list($address, $shipping) = $this->orderDependencies($user);
+    list($address, $shipping,$payment) = $this->orderDependencies($user);
     $response = $this->jsonAs($user, 'POST', 'api/orders', [
       'address_id' => $address->id,
-      'shipping_method_id' => $shipping->id
+      'shipping_method_id' => $shipping->id,
+      'payment_method_id' => $payment->id,
     ]);
     $this->assertDatabaseHas('product_variation_order', [
       'product_variation_id' => $product->id,
@@ -150,10 +166,11 @@ class OrderStoreTest extends TestCase
         ($product = $this->productWithStock())->id => ['quantity' => 0]
       ]
     );
-    list($address, $shipping) = $this->orderDependencies($user);
+    list($address, $shipping,$payment) = $this->orderDependencies($user);
     $this->jsonAs($user, 'POST', 'api/orders', [
       'address_id' => $address->id,
-      'shipping_method_id' => $shipping->id
+      'shipping_method_id' => $shipping->id,
+      'payment_method_id' => $payment->id,
     ])->assertStatus(400);
 
   }
@@ -166,10 +183,11 @@ class OrderStoreTest extends TestCase
     $user->cart()->sync(
       $product = $this->productWithStock()
     );
-    list($address, $shipping) = $this->orderDependencies($user);
+    list($address, $shipping,$payment) = $this->orderDependencies($user);
     $this->jsonAs($user, 'POST', 'api/orders', [
       'address_id' => $address->id,
-      'shipping_method_id' => $shipping->id
+      'shipping_method_id' => $shipping->id,
+      'payment_method_id' => $payment->id,
     ]);
     Event::assertDispatched(OrderCreated::class);
 //    $this->assertDatabaseHas('product_variation_order', [
@@ -185,10 +203,11 @@ class OrderStoreTest extends TestCase
     $user->cart()->sync(
       $product = $this->productWithStock()
     );
-    list($address, $shipping) = $this->orderDependencies($user);
+    list($address, $shipping,$payment) = $this->orderDependencies($user);
     $this->jsonAs($user, 'POST', 'api/orders', [
       'address_id' => $address->id,
-      'shipping_method_id' => $shipping->id
+      'shipping_method_id' => $shipping->id,
+      'payment_method_id' => $payment->id,
     ]);
     $this->assertEmpty($user->cart);
   }
@@ -208,8 +227,12 @@ class OrderStoreTest extends TestCase
       'user_id' => $user->id,
     ]);
 
+    $payment = create(PaymentMethod::class, [
+      'user_id' => $user->id,
+    ]);
+
     $shipping = create(ShippingMethod::class);
     $shipping->countries()->attach($address->country);
-    return [$address, $shipping];
+    return [$address, $shipping, $payment];
   }
 }

@@ -1,8 +1,47 @@
 <template>
-<p>orders</p>
+  <div class="section">
+    <div class="container is-fluid">
+      <div class="columns">
+        <div class="column is-12">
+          <h1 class="title is-4">Your Orders</h1>
+          <article class="message" v-if="orders.length">
+            <div class="message-body">
+              <table class="table is-hoverable is-fullwidth">
+                <tbody>
+                <Order
+                v-for="order in orders"
+                :key="order.id"
+                :order="order"
+                />
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <p v-else>
+            you have no orders
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-  export default {
+  import Order from '@/components/orders/Order';
 
+  export default {
+    data() {
+      return {
+        orders: [],
+      }
+    },
+    components: {
+      Order
+    },
+    async asyncData({app}) {
+      let response = await app.$axios.$get('orders');
+      return {
+        orders: response.data
+      }
+    }
   }
 </script>

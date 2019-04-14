@@ -4,6 +4,7 @@ namespace App;
 
 use App\Models\Address;
 use App\Models\Order;
+use App\Models\PaymentMethod;
 use App\Models\ProductVariation;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -68,6 +69,10 @@ class User extends Authenticatable implements JWTSubject
   public function addresses()
   {
     return $this->hasMany(Address::class);
+  }
+  public function paymentMethods()
+  {
+    return $this->hasMany(PaymentMethod::class);
   }
 
   public function orders()
