@@ -5,8 +5,6 @@ namespace Tests\Feature\PaymentMethods;
 use App\Models\PaymentMethod;
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class PaymentMethodIndexTest extends TestCase
 {
