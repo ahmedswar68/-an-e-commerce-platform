@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductVariationOrderTable extends Migration
+class CreateTransactionsTable extends Migration
 {
   /**
    * Run the migrations.
@@ -13,14 +13,13 @@ class CreateProductVariationOrderTable extends Migration
    */
   public function up()
   {
-    Schema::create('product_variation_order', function (Blueprint $table) {
+    Schema::create('transactions', function (Blueprint $table) {
       $table->increments('id');
       $table->integer('order_id')->unsigned()->index();
-      $table->integer('product_variation_id')->unsigned()->index();
-      $table->integer('quantity')->unsigned()->default('');
+      $table->integer('total');
       $table->timestamps();
+
       $table->foreign('order_id')->references('id')->on('orders');
-      $table->foreign('product_variation_id')->references('id')->on('product_variations');
     });
   }
 
@@ -31,6 +30,6 @@ class CreateProductVariationOrderTable extends Migration
    */
   public function down()
   {
-    Schema::dropIfExists('product_variation_order');
+    Schema::dropIfExists('transactions');
   }
 }
