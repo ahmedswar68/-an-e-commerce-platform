@@ -34,6 +34,9 @@
         orders: [],
       }
     },
+    middleware:[
+      'redirectIfGuest'
+    ],
     components: {
       Order
     },

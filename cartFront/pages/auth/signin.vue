@@ -42,11 +42,19 @@
         }
       }
     },
+    middleware:[
+      'redirectIfAuthenticated'
+    ],
     methods: {
       async signin() {
         await this.$auth.loginWith('local', {
           data: this.form
-        })
+        });
+console.log(this.$route.query.redirect);
+        if (this.$route.query.redirect) {
+          this.$router.replace(this.$route.query.redirect)
+          return
+        }
         this.$router.replace({
           name: 'index'
         })

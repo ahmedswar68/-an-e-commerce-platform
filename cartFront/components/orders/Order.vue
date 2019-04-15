@@ -24,11 +24,15 @@
 <script>
   import OrderStatusPending from '@/components/orders/statuses/OrderStatus-pending';
   import OrderStatusFailed from '@/components/orders/statuses/OrderStatus-failed';
+  import OrderStatusProcessing from '@/components/orders/statuses/OrderStatus-processing';
+  import OrderStatusCompleted from '@/components/orders/statuses/OrderStatus-completed';
 
   export default {
     components: {
       'pending': OrderStatusPending,
       'failed': OrderStatusFailed,
+      'processing': OrderStatusProcessing,
+      'completed': OrderStatusCompleted,
     },
     data() {
       return {

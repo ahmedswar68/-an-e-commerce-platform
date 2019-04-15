@@ -110,6 +110,9 @@
         this.getCart()
       }
     },
+    middleware:[
+      'redirectIfGuest'
+    ],
     components: {
       CartOverview, ShippingAddress,PaymentMethod
     },
